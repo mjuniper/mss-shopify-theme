@@ -35,8 +35,8 @@
           {% for item in cart.items %}
           <tr class="item {{ item.product.handle }}">
             <td>
-              <a href="{{ item.product.url }}">
-                <img src="{{ item.product.featured_image | product_img_url: 'thumb' }}"  alt="{{ item.product.title }}" />
+              <a href="{{ item.url }}">
+                <img src="{{ item | img_url: 'thumb' }}"  alt="{{ item.product.title }}" />
               </a>
             </td>
             <td> <a href="{{ item.product.url }}">{{ item.title }}</a></td>
